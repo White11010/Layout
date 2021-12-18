@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container > label {
+    margin: 18px;
+}
+
+.custom-radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.custom-radio+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.custom-radio+label::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border: 2px solid #4690FF;
+	border-radius: 50%;
+	margin-right: 13px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.custom-radio:disabled+label {
+	color: #DDDDDD;
+}
+
+.custom-radio:not(:disabled)+label:hover::before {
+	background-color: #ECF4FF;
+}
+
+.custom-radio:not(:disabled)+label:active::before {
+	background-color: #C3DBFF;
+}
+
+.custom-radio:disabled:not(:checked)+label::before {
+	border: 2px solid #DDDDDD;
+}
+
+.custom-radio:checked+label::before {
+	background-image: url(./images/circle.svg);
+}
+
+.custom-radio:not(:checked)+label::before {
+	background-image: none;
+}
+
+.custom-radio:checked:active+label::before {
+	background-image: url(./images/circle-active.svg);
+	border: 2px solid #2A7BF5;;
+}
+
+
+.custom-radio:disabled:checked+label::before {
+	border: 2px solid #DDDDDD;
+	background-image: url(./images/circle-disabled.svg);
+}
