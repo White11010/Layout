@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.container > label {
+    margin: 18px;
+}
+
+
+.custom-checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.custom-checkbox+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+/* Checkbox common styles */
+.custom-checkbox+label::before {
+	content: '';
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	box-sizing: border-box;
+	border: 2px solid #4690FF;
+	border-radius: 3px;
+	margin-right: 13px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.custom-checkbox:not(:disabled)+label:hover::before {
+	background-color: #ECF4FF;
+}
+
+.custom-checkbox:not(:disabled)+label:active::before {
+	background-color: #C3DBFF;
+	border: 2px solid #2A7BF5;
+	background-image: url(./images/check-active.svg);
+}
+
+.custom-checkbox:disabled+label::before {
+	border: 2px solid #DDDDDD;
+}
+
+
+
+/* Checkbox on styles */
+.custom-checkbox:checked+label::before {
+	background-image: url(./images/check.svg);
+}
+
+.custom-checkbox:disabled:checked+label::before {
+	background-image: url(./images/check-disabled.svg);
+}
+
