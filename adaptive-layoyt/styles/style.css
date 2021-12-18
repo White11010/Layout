@@ -1,0 +1,403 @@
+/* reset.css */
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul    ,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+:root {
+  --primaryBlue: #000E4B;
+  --backgound: #F3F8FF;
+}
+
+body {
+  background-color: var(--backgound);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.wrapper {
+  width: 100%;
+  max-width: 688px;
+  margin: 0 30px;
+}
+
+.header {
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.header__wrapper {
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 48px;
+  height: 48px;
+}
+
+.header__nav {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  display: none;
+}
+
+.header__list {
+  display: block;
+}
+
+.header__item {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ECECEC;
+}
+
+.header__link {
+  font-family: 'Circe';
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--primaryBlue);
+}
+
+.header__button {
+  position: absolute;
+	opacity: 0;
+  display: block;
+}
+
+.header__button + label{
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+.header__button + label::before{
+  content: '';
+  display: block;
+	width: 18px;
+	height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.header__button:not(:checked) + label::before {
+  background-image: url(../images/burger-icon.svg);
+}
+
+.header__button:checked + label::before {
+  background-image: url(../images/burger-close-icon.svg);
+}
+
+.header__button:not(:checked) ~ nav {
+  display: none;
+}
+
+.header__button:checked ~ nav {
+  display: block;
+}
+
+.intro__title {
+  font-family: 'Circe';
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 130%;
+  text-align: center;
+  padding: 89px 0;
+}
+
+.intro__title--blue {
+  color: var(--primaryBlue);
+}
+
+.intro__title--red {
+  color: #FC5151;
+}
+
+.gallery {
+  margin-bottom: 60px;
+}
+
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.gallery__item {
+  padding: 30px;
+  box-shadow: 0px 10px 60px rgba(0, 14, 75, 0.1);
+  border-radius: 10px;
+}
+
+.gallery__item--1, .gallery__item--2, .gallery__item--3, .gallery__item--4, .gallery__item--5 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 139px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.gallery__title {
+  font-family: 'Circe';
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--primaryBlue);
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.gallery__description {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--primaryBlue);
+  line-height: 170%;
+}
+
+.footer {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__wrapper {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 14, 75, 0.1);;
+}
+
+.footer__media {
+  margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__item {
+  margin-right: 26px;
+}
+
+.footer__item:last-child {
+  margin-right: 0;
+}
+
+.footer__copyright {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: rgba(0, 14, 75, 0.3);;
+}
+
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 40px;
+  }
+  
+  .header__menu-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__nav {
+    position: relative;
+    display: block !important;
+    left: unset;
+    top: unset;
+  }
+
+  .header__list {
+    display: flex;
+    align-items: center;
+  } 
+
+  .header__item {
+    margin-right: 40px;
+    border: none;
+    height: auto;
+    width: auto;
+  } 
+
+  .header__item:last-child {
+    margin-right: 0;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__button + label::before{
+    display: none;
+  } 
+
+  .intro__title {
+    padding: 112px 0;
+    font-size: 38px;
+  }
+
+  .gallery {
+    margin-bottom: 180px;
+  }
+
+  .gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 314px;
+  }
+  
+  .gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    height: 314px;
+  }
+
+  .gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    height: 314px;
+  }
+
+  .gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 287px;
+  }
+
+  .gallery__item--5 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    height: 287px;
+  }
+
+  .footer {
+    height: 80px;
+  }
+
+  .footer__wrapper {
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer__media {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    margin: 0 120px;
+  }
+
+  .intro__title {
+    padding: 102px 0;
+    font-size: 46px;
+  }
+  .gallery {
+    margin-bottom: 207px;
+  }
+
+  .gallery__description {
+    font-size: 16px;
+  }
+}
