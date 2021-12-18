@@ -1,0 +1,129 @@
+.container {
+    max-width: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 43px;
+    margin: 200px;
+    box-sizing: border-box;
+    padding: 12px 25px;
+    border: 1px solid #4690FF;
+    color: #639EF8;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button .tooltip {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    visibility: hidden;
+    width: 214px;
+    height: 41px;
+    background: #4B4B4B;
+    border-radius: 10px;
+    box-shadow: 3px 4px 15px rgba(44, 45, 67, 0.09);
+
+}
+
+.button:hover .tooltip {
+    visibility: visible;
+}
+
+.tooltip__text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: white;
+}
+
+.button .tooltip::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+  }
+
+
+/* Tooltip Up   */
+.button .tooltip--up {
+    bottom: calc(100% + 11px);
+    left: calc(50% - 107px);
+}
+
+.button .tooltip--up::after {
+    content: "";
+    top: calc(100% - 1px);
+    left: 50%;
+    margin-left: -7px;
+    border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 8px solid #4B4B4B;
+    border-bottom: none;
+}
+
+/* Tooltip Down */
+.button .tooltip--down {
+    top: calc(100% + 11px);
+    left: calc(50% - 107px);
+}
+
+.button .tooltip--down::after {
+    content: "";
+    bottom: calc(100% - 1px);
+    left: 50%;
+    margin-left: -7px;
+    border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 8px solid #4B4B4B;
+    border-top: none;
+}
+
+/* Tooltip Right */
+.button .tooltip--right {
+    top: 0;
+    left: calc(100% + 12px);
+}
+
+.button .tooltip--right::after {
+    content: "";
+    top: calc(50% - 7px);
+    left: -7px;
+    border-left: none;
+	border-right: 8px solid #4B4B4B;
+	border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+}
+
+/* Tooltip Left */
+.button .tooltip--left {
+    top: 0;
+    left: -226px;
+}
+
+.button .tooltip--left::after {
+    content: "";
+    bottom: calc(50% - 7px);
+    right: -7px;
+    border-left: 8px solid #4B4B4B;
+	border-right: none;
+	border-bottom: 7px solid transparent;
+    border-top: 7px solid transparent;
+}
+
+
+
+
+
