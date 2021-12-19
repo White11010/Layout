@@ -1,0 +1,319 @@
+/* reset.css */
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul    ,
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    user-select: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 1024px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #1F1E37;
+    font-family: 'Poppins', sans-serif;
+    transition: width .5s;
+}
+
+.sidebar__header {
+    margin-bottom: 42px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__title-container {
+    margin-left: 24px;
+}
+
+.sidebar__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    color: white;
+}
+
+.sidebar__subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #9B9CDE;
+}
+
+
+.sidebar__menu {
+    margin-bottom: auto;
+}
+.sidebar__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.sidebar__list-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 9px 0 9px 10px;
+}
+
+
+.sidebar__list-button:active .sidebar__item-title{
+    color: white;
+}
+
+.sidebar__list-button:active  {
+    background-color: #4A4895;
+}
+
+.sidebar__list-button:active #Home {
+    background-image: url(./images/menu-items/dashboard-icon--active.svg);
+} 
+
+.sidebar__list-button:active #Categories {
+   background-image: url(./images/menu-items/categories-icon--active.svg);
+} 
+
+.sidebar__list-button:active #Orders {
+    background-image: url(./images/menu-items/orders-icon--active.svg);
+}   
+
+.sidebar__list-button:active #Team {
+    background-image: url(./images/menu-items/team-icon--active.svg);
+}  
+
+.sidebar__list-button:active #Downloads {
+    background-image: url(./images/menu-items/downloads-icon--active.svg);
+}
+
+.sidebar__list-button:active #Functions {
+    background-image: url(./images/menu-items/functions-icon--active.svg);
+}
+
+.sidebar__list-button:active #Managment {
+    background-image: url(./images/menu-items/management-icon--active.svg);
+}
+
+.sidebar__list-button:active #Settings {
+    background-image: url(./images/menu-items/settings-icon--active.svg);
+}
+
+.sidebar__list-button:active #Reporting {
+    background-image: url(./images/menu-items/reporting-icon--active.svg);
+}
+
+.sidebar__item-icon {
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#Home {
+    background-image: url(./images/menu-items/dashboard-icon.svg);
+}
+
+#Categories {
+    background-image: url(./images/menu-items/categories-icon.svg);
+}
+
+#Orders {
+    background-image: url(./images/menu-items/orders-icon.svg);
+}
+
+#Team {
+    background-image: url(./images/menu-items/team-icon.svg);
+}
+
+#Downloads {
+    background-image: url(./images/menu-items/downloads-icon.svg);
+}
+
+#Functions {
+    background-image: url(./images/menu-items/functions-icon.svg);
+}
+
+#Managment {
+    background-image: url(./images/menu-items/management-icon.svg);
+}
+
+#Settings {
+    background-image: url(./images/menu-items/settings-icon.svg);
+}
+
+#Reporting {
+    background-image: url(./images/menu-items/reporting-icon.svg);
+}
+
+.sidebar__item-title {
+    margin-left: 16px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: #C3D6EC;
+}
+
+.sidebar__border {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 29px 0;
+}
+
+.sidebar__button {
+    position: absolute;
+    left: 100%;
+    top: -20px;
+    z-index: -1;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    opacity: 0;
+}
+
+.sidebar__button + label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+.sidebar__button + label::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 100%;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+	background-position: center center;
+    background-image: url(./images/arrow-right.svg);
+    cursor: pointer;
+    transition: transform .5s ease-out;
+}
+
+.sidebar__button:checked + label::before {
+    transform: rotate(-180deg);
+}
+
+.sidebar__user {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__user-info {
+    margin-left: 16px;
+}
+
+.sidebar__user-name {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: white;
+}
+
+.sidebar__user-position {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #9B9CDE;
+}
+
+
+.sidebar--minimized {
+    width: 82px;
+}
+
+.sidebar__element--minimized {
+    display: none;
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sidebar</title>
+</head>
+<body>
+    <div class="sidebar sidebar--minimized">
+        <div class="sidebar__header">
+           <img src="./images/logo-icon.svg" alt="logo" class="sidebar__logo">
+            <div class="sidebar__title-container sidebar__element--minimized">
+                <h3 class="sidebar__title">System</h3>
+                <p class="sidebar__subtitle">Workspace</p>
+            </div>
+        </div>
+        <div class="sidebar__menu">
+            <ul class="sidebar__list sidebar__list--top">
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Home"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">Home</p>
+                    </button>
+                </li>
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Categories"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">Categories</p>
+                </li>
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Orders"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">Orders</p>
+                    </button>
+                </li>
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Team"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">My team</p>
+                    </button>
+                </li>
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Downloads"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">My downloads</p>
+                    </button>
+                </li>
+            </ul>
+            <div class="sidebar__border">
+                <input type="checkbox" name="menu-button" id="menu-button" class="sidebar__button">
+                <label for="menu-button"></label>
+            </div>
+            <ul class="sidebar__list sidebar__list--bottom">
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Functions"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">Functions</p>
+                    </button>
+                </li>
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Managment"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">Managment</p>
+                    </button>
+                </li>
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Settings"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">Settings</p>
+                    </button>
+                </li>
+                <li class="sidebar__list-item">
+                    <button  class="sidebar__list-button">
+                        <div class="sidebar__item-icon" id="Reporting"></div>
+                        <p class="sidebar__item-title sidebar__element--minimized">Reporting</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar__footer">
+            <div class="sidebar__user">
+                <img src="./images/avatar.png" alt="User avatar" class="sidebar__avatar">
+                <div class="sidebar__user-info sidebar__element--minimized">
+                    <p class="sidebar__user-name">Felipe Monroy</p>
+                    <p class="sidebar__user-position">Office Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
