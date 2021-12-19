@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="custom-input__container">
+        <input type="text" class="custom-input normal-input" placeholder="Placeholder" id="NormalInputValid">
+        <label for="NormalInputValid">error</label>
+    </div>
+    <div class="custom-input__container">
+        <input type="text" class="custom-input normal-input" placeholder="Placeholder" id="NormalInputInvalid" minlength="10" required>
+        <label for="NormalInputInvalid">error</label>
+    </div>
+    <div class="custom-input__container">
+        <input type="text" class="custom-input normal-input" placeholder="Placeholder" id="NormalInputDisabled" disabled>
+        <label for="NormalInputDisabled">error</label>
+    </div>
+    <!-- <div class="custom-input__container">
+        <input type="checkbox" name="show-password" id="show-password" class="password-input__eye">
+        <label for="show-password"></label>
+        <input type="password" class="custom-input password-input" placeholder="Password">
+
+    </div>
+    <div class="custom-input__container">
+        <input type="checkbox" name="show-password" id="show-password" class="password-input__eye">
+        <label for="show-password"></label>
+        <input type="password" class="custom-input password-input" placeholder="Password" disabled>
+        
+    </div> -->
+    <script src="./js/password.js"></script>
+</body>
+</html>

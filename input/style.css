@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    border: none;
+    outline:none;
+}
+
+.custom-input {
+    display: flex;
+    align-items: center;
+    width: 251px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 0px 10px 0px 15px;
+    border: 1px solid #D7DFF2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #0F1B33;
+}
+
+.custom-input + label {
+    display: none;
+}
+
+.custom-input:invalid + label {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+}
+
+.custom-input::placeholder {
+    color: #939AAB;
+}
+
+.custom-input:hover {
+    border: 1px solid #ABB4CB;
+}
+
+.custom-input:not(:placeholder-shown) {
+    border: 1px solid #ABB4CB;
+}
+
+.custom-input:focus {
+    background: #F7F8FA;
+}
+
+.custom-input:invalid {
+    border: 1px solid #ED6262;
+}
+
+.custom-input:disabled {
+    border: 1px solid #EBEEF5;
+}
+
+.custom-input:disabled::placeholder {
+    color: #C2CDE5;
+}
+
+
+.custom-input__container {
+    position: relative;
+    width: 251px;
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+.password-input__eye {
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 8px;
+    z-index: -1;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    opacity: 0;
+}
+
+.password-input__eye + label {
+    display: inline-flex;
+	align-items: center;
+	user-select: none;
+}   
+
+.password-input__eye + label::before {
+	content: '';
+    position: absolute;
+    top: calc(50% - 12px);
+    right: 8px;
+	display: inline-block;
+    width: 24px;
+    height: 24px;
+	background-repeat: no-repeat;
+	background-position: center center;
+    background-image: url(./images/eye-invisible.svg);
+    cursor: pointer;
+}
+
+.password-input__eye:checked + label:hover::before {
+    background-image: url(./images/eye-hovered.svg);
+}
+
+.password-input__eye:checked + label::before {
+    background-image: url(./images/eye.svg);
+}
+
+.password-input:disabled ~ label::before {
+    background-image: url(./images/eye-disabled.svg);
+}
