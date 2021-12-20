@@ -1,10 +1,12 @@
-const inputPassword = document.querySelector(".password-input")
-const eyeButton = document.querySelector(".password-input__eye")
-
-eyeButton.addEventListener('change', (e) => {
-    if (eyeButton.checked === true) {
-        inputPassword.setAttribute('type', 'text');
-    } else {
-         inputPassword.setAttribute('type', 'password');
+(function () {
+    for (const eyeButton of document.querySelectorAll(".password-input__eye")) {
+        eyeButton.addEventListener('click', function() {
+            if (this.checked === true) {
+                this.closest('.custom-input__container').querySelector('.password-input').setAttribute('type', 'text');
+            } else {
+                this.closest('.custom-input__container').querySelector('.password-input').setAttribute('type', 'password');
+            }
+        })
     }
-})
+})()
+

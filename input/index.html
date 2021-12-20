@@ -13,28 +13,65 @@
 <body>
     <div class="custom-input__container">
         <input type="text" class="custom-input normal-input" placeholder="Placeholder" id="NormalInputValid">
-        <label for="NormalInputValid">error</label>
+        <label for="NormalInputValid">Error text</label>
     </div>
     <div class="custom-input__container">
         <input type="text" class="custom-input normal-input" placeholder="Placeholder" id="NormalInputInvalid" minlength="10" required>
-        <label for="NormalInputInvalid">error</label>
+        <label for="NormalInputInvalid">Error text</label>
     </div>
     <div class="custom-input__container">
         <input type="text" class="custom-input normal-input" placeholder="Placeholder" id="NormalInputDisabled" disabled>
-        <label for="NormalInputDisabled">error</label>
-    </div>
-    <!-- <div class="custom-input__container">
-        <input type="checkbox" name="show-password" id="show-password" class="password-input__eye">
-        <label for="show-password"></label>
-        <input type="password" class="custom-input password-input" placeholder="Password">
-
+        <label for="NormalInputDisabled">Error text</label>
     </div>
     <div class="custom-input__container">
-        <input type="checkbox" name="show-password" id="show-password" class="password-input__eye">
-        <label for="show-password"></label>
-        <input type="password" class="custom-input password-input" placeholder="Password" disabled>
-        
-    </div> -->
+        <input type="password" class="custom-input password-input" placeholder="Password" id="PasswordInputValid">
+        <label for="PasswordInputValid">Error text</label>
+        <input type="checkbox" name="password-eye-1" id="password-eye-1" class="password-input__eye">
+        <label for="password-eye-1"></label>
+    </div>
+    <div class="custom-input__container">
+        <input type="password" class="custom-input password-input" placeholder="Password" id="PasswordInputInvalid" minlength="10" required>
+        <label for="PasswordInputInvalid">Error text</label>
+        <input type="checkbox" name="password-eye-2" id="password-eye-2" class="password-input__eye">
+        <label for="password-eye-2"></label>
+    </div>
+    <div class="custom-input__container">
+        <input type="password" class="custom-input password-input" placeholder="Password" id="PasswordInputDisabled" disabled>
+        <label for="PasswordInputDisabled">Error text</label>
+        <input type="checkbox" name="password-eye-3" id="password-eye-3" class="password-input__eye">
+        <label for="password-eye-3"></label>
+    </div>
+    <div class="custom-input__container">
+        <div class="select__wrapper">
+            <div class="select">
+                <div class="select__trigger"><span class="select__placeholder">Placeholder</span>
+                    <div class="select__arrow"></div>
+                </div>
+                <div class="select__options">
+                    <span class="select__option">Placeholder1</span>
+                    <span class="select__option">Placeholder2</span>
+                    <span class="select__option">Placeholder3</span>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div class="custom-input__container">
+        <div class="select__wrapper select--disabled">
+            <div class="select">
+                <div class="select__trigger"><span class="select__placeholder">Placeholder</span>
+                    <div class="select__arrow"></div>
+                </div>
+                <div class="select__options">
+                    <span class="select__option">Placeholder1</span>
+                    <span class="select__option">Placeholder2</span>
+                    <span class="select__option">Placeholder3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
     <script src="./js/password.js"></script>
+    <script src="./js/select.js"></script>
 </body>
 </html>
